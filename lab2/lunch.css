@@ -1,0 +1,108 @@
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dish-card {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 20px 30px; 
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); 
+    background-color: #ffffff; 
+}
+
+.dish-card:hover {
+    outline: 2px solid #4b8462;
+    outline-offset: -2px;
+}
+
+.dish-card img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 35px; 
+    margin-bottom: 15px; 
+}
+
+.dish-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dish-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.dish-weight {
+    color: #888888; 
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    background-color: #f1eee9; 
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+}
+
+.dish-card:hover .add-button {
+    background-color: #4b8462; 
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    .dish-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dish-card {
+        padding: 15px 20px;
+    }
+
+    .dish-card img {
+        margin-bottom: 10px;
+    }
+
+    .dish-price {
+        font-size: 1.2em;
+    }
+
+    .dish-name {
+        font-size: 1em;
+    }
+
+    .dish-weight {
+        margin-bottom: 15px;
+    }
+
+    .add-button {
+        padding: 8px 25px;
+    }
+}
