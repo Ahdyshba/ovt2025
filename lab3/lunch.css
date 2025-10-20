@@ -1,0 +1,308 @@
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dish-card {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 20px 30px; 
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); 
+    background-color: #ffffff; 
+}
+
+.dish-card:hover {
+    outline: 2px solid #4b8462;
+    outline-offset: -2px;
+}
+
+.dish-card img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 35px; 
+    margin-bottom: 15px; 
+}
+
+.dish-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dish-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.dish-weight {
+    color: #888888; 
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    background-color: #f1eee9; 
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+}
+
+.dish-card:hover .add-button {
+    background-color: #4b8462; 
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    .dish-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dish-card {
+        padding: 15px 20px;
+    }
+
+    .dish-card img {
+        margin-bottom: 10px;
+    }
+
+    .dish-price {
+        font-size: 1.2em;
+    }
+
+    .dish-name {
+        font-size: 1em;
+    }
+
+    .dish-weight {
+        margin-bottom: 15px;
+    }
+
+    .add-button {
+        padding: 8px 25px;
+    }
+}
+
+
+.order-form-section {
+    max-width: 1000px; 
+    margin: 50px auto; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+}
+
+.order-form-section .form-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.order-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+}
+
+.order-form h3 {
+    font-size: 1.8em;
+    color: #4b8462;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7cd592;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="time"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #7cd592;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; 
+    min-height: 80px;
+}
+
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.radio-group {
+    margin-bottom: 20px;
+}
+
+.radio-group p.delivery-time-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.radio-group div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.radio-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.form-buttons button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reset-button {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.reset-button:hover {
+    background-color: #ccc;
+}
+
+.submit-button {
+    background-color: #7cd592;
+    color: #ffffff;
+}
+
+.submit-button:hover {
+    background-color: #4b8462;
+}
+
+@media (max-width: 800px) {
+    .order-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .order-form-section {
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .order-form-section .form-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .order-form h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .form-buttons button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
